@@ -1,0 +1,28 @@
+SQLITE:
+create table employee(id integer,name varchar,address varchar(15),salary integer,age integer);
+sqlite> insert into employee(id,name,address,salary,age)values(101,'vaish','trichy',25000,21);
+sqlite> insert into employee(id,name,address,salary,age)values(102,'sasi','lalgudi',26000,22);
+sqlite> insert into employee(id,name,address,salary,age)values(103,'janani','madurai',27000,23);
+sqlite> insert into employee(id,name,address,salary,age)values(104,'sneha','cbe',22000,24);
+sqlite> select*from employee;
+101|vaish|trichy|25000|21
+102|sasi|lalgudi|26000|22
+103|janani|madurai|27000|23
+104|sneha|cbe|22000|24
+sqlite> delete from employee where salary=26000;
+sqlite> select*from employee;
+101|vaish|trichy|25000|21
+103|janani|madurai|27000|23
+104|sneha|cbe|22000|24
+sqlite> update employee set name='sne' where id=104;
+sqlite> select*from employee;
+101|vaish|trichy|25000|21
+103|janani|madurai|27000|23
+104|sne|cbe|22000|24
+sqlite> alter table employee add email varchar(255);
+sqlite> select*from employee;
+101|vaish|trichy|25000|21|
+103|janani|madurai|27000|23|
+104|sne|cbe|22000|24|
+sqlite> drop table employee;
+sqlite> select*from employee;
